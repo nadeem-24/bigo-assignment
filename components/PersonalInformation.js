@@ -54,6 +54,10 @@ const PersonalInformation = ({ savedData, setSavedData, step, setStep }) => {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Enter first name"
                 {...register("first_name", {
+                  required: {
+                    value: true,
+                    message: "First Name Required",
+                  },
                   maxLength: {
                     value: 50,
                     message: "Cannot be more than 50 characters.",
@@ -79,6 +83,10 @@ const PersonalInformation = ({ savedData, setSavedData, step, setStep }) => {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Enter last name"
                 {...register("last_name", {
+                  required: {
+                    value: true,
+                    message: "Last Name required",
+                  },
                   maxLength: {
                     value: 50,
                     message: "Cannot be more than 50 characters.",
@@ -104,6 +112,10 @@ const PersonalInformation = ({ savedData, setSavedData, step, setStep }) => {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Enter father's name"
                 {...register("father_name", {
+                  required: {
+                    value: true,
+                    message: "Father name required",
+                  },
                   maxLength: {
                     value: 50,
                     message: "Cannot be more than 50 characters.",
@@ -129,6 +141,10 @@ const PersonalInformation = ({ savedData, setSavedData, step, setStep }) => {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Enter mother's name"
                 {...register("mother_name", {
+                  required: {
+                    value: true,
+                    message: "Mother name required",
+                  },
                   maxLength: {
                     value: 50,
                     message: "Cannot be more than 50 characters.",

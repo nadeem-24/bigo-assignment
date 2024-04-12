@@ -2,33 +2,27 @@ import axios from "axios";
 
 
   /**
-   * Get all posts
-   * @returns
+   * Get all Products
    */
   export const getAllProducts = () => {
     return axios.get('https://dummyjson.com/products');
   }
 
   /**
-   * Get By Id
-   * @returns
+   * Get By Product Id
    */
- export const getProductsById =() => {
-    return axios.get("https://jsonplaceholder.typicode.com/posts/1");
+ export const getProductsById =(productId) => {
+    return axios.get(`https://dummyjson.com/products/${productId}`);
   }
 
   /**
-   *To Add a Post
-   * @returns
+   *To Add a Product
+   *! data required
    */
-export const addProduct =async()=> {
-    const res = await axios.post("https://jsonplaceholder.typicode.com/posts", {
+export const addProduct =async(data)=> {
+    const res = await axios.post("https://dummyjson.com/products/add", {
       method: "POST",
-      body: JSON.stringify({
-        title: "foo",
-        body: "bar",
-        userId: 1,
-      }),
+      body: JSON.stringify(data),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
@@ -37,12 +31,11 @@ export const addProduct =async()=> {
   }
 
   /**
-   *To Update a Post
-   * @returns
+   *To Update a Product
    */
-  export const  updateProduct=  async() => {
+  export const  updateProduct=  async(productId) => {
     const res = await axios.put(
-      "https://jsonplaceholder.typicode.com/posts/1",
+      `https://dummyjson.com/products/${productId}`,
       {
         method: "PUT",
         body: JSON.stringify({
@@ -59,9 +52,9 @@ export const addProduct =async()=> {
     return res;
   }
 
-  export const deleteProduct =async()=> {
+  export const deleteProduct =async(productId)=> {
     const res = await axios.delete(
-      "https://jsonplaceholder.typicode.com/posts/1",
+      `https://dummyjson.com/products/${productId}`,
       {
         method: "DELETE",
       }
