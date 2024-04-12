@@ -9,13 +9,13 @@ export default function Home({ children }) {
   return (
     <QueryClientProvider client={client}>
       <div className="p-5 flex-row">
-        <div className="w-2/12 mb-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <Link className="w-full" href="/personal-info">
+        <div className="w-1/12  flex justify-center items-center mb-3 bg-blue-500 hover:bg-blue-700 text-white font-bold  rounded">
+          <Link className="py-2 px-4" href="/personal-info">
             Question 1
           </Link>
         </div>
-        <div className=" w-2/12 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <Link className="w-full" href="/products">
+        <div className=" w-1/12 flex justify-center items-center bg-blue-500 hover:bg-blue-700 text-white font-bold rounded">
+          <Link className=" py-2 px-4" href="/products">
             Question 2
           </Link>
         </div>
